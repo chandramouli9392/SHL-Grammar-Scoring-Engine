@@ -1,0 +1,31 @@
+# Python cache
+__pycache__/
+*.py[cod]
+
+# Generated model files
+catboost_info/
+*.pkl
+*.joblib
+*.pt
+*.pth
+
+# Generated features and reports
+features/
+eda_reports/
+
+# Virtual environments
+.venv/
+venv/
+
+# Temporary files
+*.log
+.ipynb_checkpoints/
+
+# Secrets
+.env
+.env.*
+
+# Audio datasets
+*.wav
+*.mp3
+*.flac

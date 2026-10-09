@@ -1,0 +1,10 @@
+import pandas as pd
+tr_trans = pd.read_csv('features/transcripts_train.csv')
+ac_tr = pd.read_csv('features/acoustic_features_train.csv')
+overlap = set(tr_trans['filename']) & set(ac_tr['filename'])
+print(f'Transcripts train: {len(tr_trans)} files')
+print(f'Acoustic train: {len(ac_tr)} files')
+print(f'Overlap (both): {len(overlap)} files')
+print('Train transcript cols:', list(tr_trans.columns))
+print('Acoustic cols (sample):', list(ac_tr.columns[:5]))
+print('Has label in acoustic:', 'label' in ac_tr.columns)
